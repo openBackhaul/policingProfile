@@ -3,7 +3,7 @@ Definition of a Profile for Traffic Policing
 
 ### Branch
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- Empty Profile for supporting references in TSP Interface definitions
+- 1.0.0-tsp.d.t : Empty Profile for supporting references in TSP Interface definitions
 
 ### UML
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
