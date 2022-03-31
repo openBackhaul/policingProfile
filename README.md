@@ -1,29 +1,26 @@
 # policingProfile
-Definition of a Profile for Traffic Policing
+- Definition of a Profile for Policing
+- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 
 ### Branch
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- 1.0.0-tsp.d.t : Empty Profile for supporting references in TSP Interface definitions
+- 1.0.0-tsp.d.t : Use case driven model for the Transport SDN Pilot at Telefonica Germany
 
 ### UML
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- to be provided
+- [PolicingProfile_1.0.0-tsp.220331.1220](./PolicingProfile_1.0.0-tsp.220331.1220.zip)
 
 ### Overview 
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- to be provided
-
-### List of Classes
-- not planned 
+- [PolicingProfile_1.0.0-tsp.220331.1220+overview.1](./PolicingProfile_1.0.0-tsp.220331.1220+overview.1.png)
 
 ### GenDoc Export
-- not planned 
+- [PolicingProfile_1.0.0-tsp.220331.1220+gendoc.1](./PolicingProfile_1.0.0-tsp.220331.1220+gendoc.1.docx)
 
 ### Augmentation Condition
 - When statement in Augmentation statement demands for Profile::profileName==PROFILE_NAME_TYPE_POLICING_PROFILE
 
 ### YANG File
-- Waseem Sattar (Waseem.Sattar@openBackhaul.com)
+- to be provided
+
+### JSON Schema
 - to be provided
 
 ### Interface Simulator
@@ -33,15 +30,13 @@ Definition of a Profile for Traffic Policing
 - not planned
 
 ### Publication
-- not planned
+- Candidate for ONF TR-532 v2.0 
 
 ### Model Classification
-- Trial
+- Live Network
 
 ### Open Issue List
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - [policingProfile/issues](../../issues)
 
 ### Comments
-This is just an empty Profile definition.
-It is necessary for being able to expand coverage on policing without touching MAC, VLAN and IP Interface definitions again.
+./.
