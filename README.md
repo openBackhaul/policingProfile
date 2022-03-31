@@ -18,7 +18,7 @@
 - When statement in Augmentation statement demands for Profile::profileName==PROFILE_NAME_TYPE_POLICING_PROFILE
 
 ### YANG File
-- to be provided
+- [PolicingProfile_1.0.0-tsp.220331.1220+yang.1](./PolicingProfile_1.0.0-tsp.220331.1220+yang.1.zip)
 
 ### JSON Schema
 - to be provided
