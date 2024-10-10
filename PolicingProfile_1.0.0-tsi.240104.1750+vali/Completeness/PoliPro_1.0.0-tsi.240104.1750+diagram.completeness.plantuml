@@ -1,0 +1,96 @@
+@startuml PoliPro_1.0.0-tsi.240104.1750+diagram.completeness
+skinparam responseMessageBelowArrow true
+
+title
+PoliPro_1.0.0-tsi.240104.1750+diagram.completeness
+end title
+
+participant "Postman" as Postman
+participant "Collection" as Collection
+participant "../profile-collection" as ProfileCollection
+participant "../policing-profile-capability" as Capability
+participant "../policing-profile-configuration" as Configuration
+participant "../createPolicingProfile" as CreateRpc
+participant "../modifyPolicingProfile" as ModifyRpc
+participant "../deletePolicingProfile" as DeleteRpc
+
+activate Postman
+
+group Preparation
+  Postman --\\o Collection : mountName
+
+  Postman -> ProfileCollection
+  Postman <-- ProfileCollection : {(uuid, profileName)}
+  note right Postman
+    filter for
+    PolicingProfile
+  end note
+  Postman --\\o Collection : existingUuid
+end
+
+group Capability Validation
+  Collection --\\o Postman : existingUuid
+  Postman -> Capability : {existingUuid}
+  Postman <-- Capability : {capabilites}
+  note right Postman
+    schema validation
+  end note
+  Postman --\\o Collection : capabilites
+end
+
+group Configuration Validation
+  Collection --\\o Postman : existingUuid
+  Postman -> Configuration : {existingUuid}
+  Postman <-- Configuration : {configuration}
+  note right Postman
+    schema validation
+  end note
+  Postman --\\o Collection : configuration
+end
+
+group Create RPC
+  Collection --\\o Postman : capabilites
+  Postman -> CreateRpc : {createdParameterValues}
+  Postman <-- CreateRpc : {createdUuid}
+  note right Postman
+    schema validation
+  end note
+  Postman --\\o Collection : createdParameterValues,\n createdUuid
+  Collection --\\o Postman : createdUuid
+  Postman -> Configuration : {createdUuid}
+  Postman <-- Configuration : {readConfiguration}
+  Collection --\\o Postman : createdParameterValues
+  note right Postman
+    readConfiguration==createdParameterValues?
+  end note
+end
+
+group Modify RPC
+  Collection --\\o Postman : capabilites, createdUuid
+  Postman -> ModifyRpc : {createdUuid, modifiedParameterValues}
+  Postman <-- ModifyRpc : 204
+  note right Postman
+    response==204?
+  end note
+  Postman --\\o Collection : modifiedParameterValues
+  Collection --\\o Postman : createdUuid
+  Postman -> Configuration : {createdUuid}
+  Postman <-- Configuration : {readConfiguration}
+  Collection --\\o Postman : modifiedParameterValues
+  note right Postman
+    readConfiguration==modifiedParameterValues?
+  end note
+end
+
+group Delete RPC
+  Collection --\\o Postman : createdUuid
+  Postman -> DeleteRpc : {createdUuid}
+  Postman <-- DeleteRpc : 204
+  note right Postman
+    response==204?
+  end note
+end
+
+deactivate Postman
+
+@enduml

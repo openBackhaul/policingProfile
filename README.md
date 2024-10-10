@@ -17,22 +17,22 @@
 - When statement in Augmentation statement demands for Profile::profileName==PROFILE_NAME_TYPE_POLICING_PROFILE
 
 ### YANG File
-- [PolicingProfile_1.0.0-tsi.240104.1750+yang.1](./PolicingProfile_1.0.0-tsi.240104.1750+yang.1.zip)
+- [PolicingProfile_1.0.0-tsi.240104.1750+yang.1](./PolicingProfile_1.0.0-tsi.240104.1750+yang/policing-profile-1-0.yang)
 
-### JSON Schema
-- to be provided
+### Schema
+- [PolicingProfile_1.0.0-tsi.240104.1750+schema](./PolicingProfile_1.0.0-tsi.240104.1750+schema/)
 
 ### Interface Simulator
-- not planned 
+- [PolicingProfile_1.0.0-tsi.240104.1750+simulator](./PolicingProfile_1.0.0-tsi.240104.1750+simu/)
 
 ### Interface Validator
-- to be provided
+- [PolicingProfile_1.0.0-tsi.240104.1750+validator](./PolicingProfile_1.0.0-tsi.240104.1750+vali/)
 
 ### Publication
-- Candidate for ONF TR-532 v2.0 
+- Published as a part of ONF TR-532 v2.0  
 
 ### Model Classification
-- Live Network
+- Operational in Live Network
 
 ### Open Issue List
 - [policingProfile/issues](../../issues)

@@ -1,0 +1,112 @@
+/profile-collection/profile={uuid}/policing-profile-1-0:policing-profile-pac/policing-profile-capability:
+  type: object
+  required:
+    - policing-profile-1-0:policing-profile-capability
+  properties:
+    policing-profile-1-0:policing-profile-capability:
+      type: object
+      required:
+        - profile-naming-is-avail
+        - supported-marker-mode-list
+        - supported-policer-kind-list
+        - information-rate-min
+        - information-rate-max
+        - burst-size-min
+        - burst-size-max
+      properties:
+        profile-naming-is-avail:
+          type: boolean
+        supported-marker-mode-list:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            enum:
+              - 'policing-profile-1-0:MARKER_MODE_TYPE_COLOR_BLIND'
+              - 'policing-profile-1-0:MARKER_MODE_TYPE_COLOR_AWARE'
+              - 'policing-profile-1-0:MARKER_MODE_TYPE_NOT_YET_DEFINED'
+        supported-policer-kind-list:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            enum:
+              - 'policing-profile-1-0:POLICER_KIND_TYPE_SINGLE_RATE_THREE_COLOR'
+              - 'policing-profile-1-0:POLICER_KIND_TYPE_TWO_RATE_THREE_COLOR'
+              - 'policing-profile-1-0:POLICER_KIND_TYPE_NOT_YET_DEFINED'
+        information-rate-min:
+          type: integer
+          format: int32
+        information-rate-max:
+          type: integer
+          format: int32
+        burst-size-min:
+          type: integer
+          format: int16
+        burst-size-max:
+          type: integer
+          format: int16
+
+/profile-collection/profile={uuid}/policing-profile-1-0:policing-profile-pac/policing-profile-configuration:
+  type: object
+  required:
+    - policing-profile-1-0:policing-profile-configuration
+  properties:
+    policing-profile-1-0:policing-profile-configuration:
+      type: object
+      required:
+        - external-label
+        - marker-mode
+        - policer-kind
+        - committed-information-rate
+        - committed-burst-size
+        - excess-burst-size
+        - peak-information-rate
+        - peak-burst-size
+      properties:
+        external-label:
+          type: string
+        marker-mode:
+          type: string
+          enum:
+            - 'policing-profile-1-0:MARKER_MODE_TYPE_COLOR_BLIND'
+            - 'policing-profile-1-0:MARKER_MODE_TYPE_COLOR_AWARE'
+            - 'policing-profile-1-0:MARKER_MODE_TYPE_NOT_YET_DEFINED'
+        policer-kind:
+          type: string
+          enum:
+            - 'policing-profile-1-0:POLICER_KIND_TYPE_SINGLE_RATE_THREE_COLOR'
+            - 'policing-profile-1-0:POLICER_KIND_TYPE_TWO_RATE_THREE_COLOR'
+            - 'policing-profile-1-0:POLICER_KIND_TYPE_NOT_YET_DEFINED'
+        committed-information-rate:
+          type: integer
+          format: int32
+        committed-burst-size:
+          type: integer
+          format: int32
+        excess-burst-size:
+          type: integer
+          format: int32
+        peak-information-rate:
+          type: integer
+          format: int32
+        peak-burst-size:
+          type: integer
+          format: int32
+
+/create-policing-profile:
+  type: object
+  required:
+    - policing-profile-1-0:output
+  properties:
+    policing-profile-1-0:output:
+      type: object
+      required:
+        - created-policing-profile
+      properties:
+        created-policing-profile:
+          type: string
+
+/modify-policing-profile:
+
+/delete-policing-profile:
