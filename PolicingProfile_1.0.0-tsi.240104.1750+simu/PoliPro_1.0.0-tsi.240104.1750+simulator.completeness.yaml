@@ -260,8 +260,9 @@ paths:
                     properties:
                       created-policing-profile:
                         type: string
-                    example:
-                      created-policing-profile: 'poliPro3'
+                example:
+                  policing-profile-1-0:output:
+                    created-policing-profile: 'poliPro3'
           headers:
             x-correlator:
               $ref: '#/components/headers/x-correlator'
@@ -500,7 +501,7 @@ paths:
 # =============
 #
 # Preparation => MountName=305250001, UUID=poliPro1
-  /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct//profile-collection:
+  /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct/profile-collection:
     parameters:
       - $ref: '#/components/parameters/mountName'
       - $ref: '#/components/parameters/fields'
@@ -701,8 +702,9 @@ paths:
                     properties:
                       created-policing-profile:
                         type: string
-                    example:
-                      created-policing-profile: 'poliPro3'
+                example:
+                  policing-profile-1-0:output:
+                    created-policing-profile: 'poliPro3'
   /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct/profile-collection/profile=poliPro3a/policing-profile-1-0:policing-profile-pac/policing-profile-configuration:
     parameters:
       - $ref: '#/components/parameters/mountName'
@@ -1059,8 +1061,9 @@ paths:
                     properties:
                       created-policing-profile:
                         type: string
-                    example:
-                      created-policing-profile: 'string'
+                example:
+                  policing-profile-1-0:output:
+                    created-policing-profile: 'string'
           headers:
             x-correlator:
               $ref: '#/components/headers/x-correlator'

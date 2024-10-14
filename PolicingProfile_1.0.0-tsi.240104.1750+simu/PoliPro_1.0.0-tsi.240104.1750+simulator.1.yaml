@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: PolicingProfile_1.0.0-tsi.240104.1750+simulator.1
-  version: 2.0.0
+  version: 1.0.0
 
 paths:
 
